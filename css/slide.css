@@ -1,0 +1,99 @@
+@charset "utf-8";
+.slider{
+  margin:0 auto;
+  width:800px;
+  text-align:left;
+  position: relative;
+  visibility: hidden;
+}
+.slider ul,
+.slider ul li{
+  float:left;
+  display: inline;
+  overflow: hidden;
+}
+.slider ul li img{
+  width: 100%;
+}
+.sliderCover{
+  margin-bottom: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+.sliderWrap{
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  #wrapper{
+    width:90%;
+  }
+  .slider{
+    width: 100%
+  }
+}
+.pagiNation {
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  text-align: center;
+  position: absolute;
+  z-index: 110;
+}
+.pagiNation a{
+  margin: 0 5px;
+  width: 40px;
+  height: 10px;
+  display: inline-block;
+  overflow:  hidden;
+  background: #aaa;
+  transition: all 0.2s ease-in-out;
+}
+.pagiNation a:hover {
+  opacity: 0.6;
+}
+.pagiNation a.pnActive:hover{
+  opacity: 1;
+}
+.pagiNation a.pnActive{
+  background:  #000;
+}
+.slider .btnPrev,
+.slider .btnNext{
+  top: 0;
+  position: absolute;
+  z-index: 105;
+}
+.slider .btnPrev{
+  left: 0;
+  background: url(../img/slide/slide-btn/btnPrev.png) no-repeat center right;
+  background-color: rgba(0, 0, 0, 0.4)
+}
+.slider .btnNext{
+  right: 0;
+  background: url(../img/slide/slide-btn/btnNext.png) no-repeat center left;
+  background-color: rgba(0, 0, 0, 0.4)
+}
+.slider .btnPrev:hover;
+.slider .btnNext:hover{
+  transition: all 0.3s linear;
+  background-color: rgba(0, 0, 0, 0.8)
+}
+.slider ul:before,
+.slider ul:after,
+.sliderWrap:before,
+.sliderWrap:after{
+  content: " ";
+  display: table;
+}
+.slider ul:after,
+.sliderWrap:after{
+  clear: both;
+}
+.slider ul,
+.sliderWrap{
+  *zoom: 1;
+}
